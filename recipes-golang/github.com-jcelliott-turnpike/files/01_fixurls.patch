@@ -1,0 +1,24 @@
+diff --git a/turnpike/main.go b/turnpike/main.go
+index 46297f2..8017b57 100644
+--- a/turnpike/main.go
++++ b/turnpike/main.go
+@@ -9,7 +9,7 @@ import (
+ 	"os/signal"
+ 	"time"
+ 
+-	"gopkg.in/jcelliott/turnpike.v2"
++	"github.com/jcelliott/turnpike"
+ )
+ 
+ var (
+diff --git a/vendor/vendor.json b/vendor/vendor.json
+index a5cbf40..8ec39e9 100644
+--- a/vendor/vendor.json
++++ b/vendor/vendor.json
+@@ -93,5 +93,5 @@
+ 			"revisionTime": "2016-10-22T18:22:21Z"
+ 		}
+ 	],
+-	"rootPath": "gopkg.in/jcelliott/turnpike.v2"
++	"rootPath": "github.com/jcelliott/turnpike"
+ }

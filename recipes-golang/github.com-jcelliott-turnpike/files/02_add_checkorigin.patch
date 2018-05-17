@@ -1,0 +1,25 @@
+diff --git a/websocket_server.go b/websocket_server.go
+index 14849a9..74295cf 100644
+--- a/websocket_server.go
++++ b/websocket_server.go
+@@ -62,12 +62,19 @@ func NewBasicWebsocketServer(uri string) *WebsocketServer {
+ 	return s
+ }
+ 
++func allowAllCheckOrigin(r *http.Request) bool {
++	// allow all connections by default
++	return true
++}
++
++var CheckOriginFunc func(r *http.Request)(bool) = allowAllCheckOrigin
++
+ func newWebsocketServer(r Router) *WebsocketServer {
+ 	s := &WebsocketServer{
+ 		Router:    r,
+ 		protocols: make(map[string]protocol),
+ 	}
+-	s.Upgrader = &websocket.Upgrader{}
++	s.Upgrader = &websocket.Upgrader{CheckOrigin:CheckOriginFunc}
+ 	s.RegisterProtocol(jsonWebsocketProtocol, websocket.TextMessage, new(JSONSerializer))
+ 	s.RegisterProtocol(msgpackWebsocketProtocol, websocket.BinaryMessage, new(MessagePackSerializer))
+ 	return s
