@@ -4,10 +4,10 @@ LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://src/${GO_IMPORT}/license.md;md5=deffee4336b7255ee1965fa9ff30eb5a"
 
 
-GO_IMPORT = "github.com/newtools/zsocket"
+GO_IMPORT = "github.com/exactassembly/zsocket"
 SRC_URI="git://github.com/exactassembly/zsocket.git;protocol=https;destsuffix=${PN}-${PV}/src/${GO_IMPORT}"
 #SRCREV="${AUTOREV}"
-SRCREV="167e205a4337d4fcdddf26f4162b0687bb58bc37"
+SRCREV="d79c7153ba99ea651b41c31350abdfc23cc426eb"
 
 inherit go
 
