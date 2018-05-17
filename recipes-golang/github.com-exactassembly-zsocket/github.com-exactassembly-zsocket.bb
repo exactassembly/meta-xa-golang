@@ -7,7 +7,7 @@ LIC_FILES_CHKSUM = "file://src/${GO_IMPORT}/license.md;md5=deffee4336b7255ee1965
 GO_IMPORT = "github.com/exactassembly/zsocket"
 SRC_URI="git://github.com/exactassembly/zsocket.git;protocol=https;destsuffix=${PN}-${PV}/src/${GO_IMPORT}"
 #SRCREV="${AUTOREV}"
-SRCREV="5b9b5d3b2c63acce966d4c53251203e6005238ff"
+SRCREV="66aa094d29634221f736d034b7307f49e5c99d86"
 
 inherit go
 
