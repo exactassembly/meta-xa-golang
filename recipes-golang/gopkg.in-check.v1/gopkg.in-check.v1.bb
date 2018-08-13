@@ -13,4 +13,5 @@ inherit go
 DEPENDS += "\
     golang.org-x-net \
     golang.org-x-sys \
+    github.com-kr-pretty \
 "
