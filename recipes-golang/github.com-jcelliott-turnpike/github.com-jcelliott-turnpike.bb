@@ -8,8 +8,6 @@ GO_IMPORT = "github.com/jcelliott/turnpike"
 
 DEPENDS += "\
     ncurses \
-    golang.org-x-net \
-    golang.org-x-sys \
 "
 
 SRC_URI=" \
